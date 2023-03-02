@@ -5,15 +5,13 @@ import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 const routes: Routes = [
-  {path:'home', component:HomeComponent},
-  {path:'admin', component:AdminComponent}
+  {path:'', component:HomeComponent},
+  {path:'admin', component:AdminComponent},
+  {path:'sidebar', component: SidebarComponent}
 ];
 
 @NgModule({
-  declarations:[
-    SidebarComponent
-  ],
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class PagesRoutingModule { }

@@ -4,8 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { PagesRoutingModule } from './pages/pages-routing.module';
-import { PagesComponent } from './pages/pages.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -13,13 +16,15 @@ import { PagesComponent } from './pages/pages.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    PagesComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PagesRoutingModule
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
